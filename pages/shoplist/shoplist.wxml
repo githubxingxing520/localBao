@@ -1,0 +1,17 @@
+<block wx:for="{{shopList}}" wx:key="id">
+<view class='shop'>
+  <image src='{{item.images[0]}}' mode='spectFill'></image>
+  <view class='shop-info'>
+    <text class='shop-title ellipsis'>{{item.name}}</text>
+    <text class='shop-tel'>电话:{{item.phone}}</text>
+    <text class='shop-address ellipsis'>店铺地址:{{item.address}}</text>
+    <text class='shop-time'>营业时间:{{item.businessHours}}</text>
+  </view>
+  <view class='shop-start'>
+    <view class='shop-after'>★★★★★</view>
+    <view class='shop-before' style='width:{{item.score}}%'>★★★★★</view>
+  </view>
+</view>
+</block>
+<view class='loading' wx:if="{{hasMore}}">正在加载...</view>
+<view class='loadingEnd'wx:else>——你已经到达我的底限——</view>
